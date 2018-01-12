@@ -10,10 +10,10 @@ import 'rxjs/add/operator/toPromise';
 export class TestComponent implements OnInit {
   ip = '0';
   constructor(private http: Http) { 
-    this.http.get('http://ip.jsontest.com/').toPromise()
+    this.http.get('http://echo.jsontest.com/key/value/one/two').toPromise()
     .then(res=>res.json())
     .then(resJson => {
-      this.ip = resJson.ip
+      this.ip = resJson.one
     })
   }
 
