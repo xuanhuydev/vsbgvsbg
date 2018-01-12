@@ -8,7 +8,7 @@ import 'rxjs/add/operator/toPromise';
   styleUrls: ['./test.component.css']
 })
 export class TestComponent implements OnInit {
-  ip = '';
+  ip = '0';
   constructor(private http: Http) { 
     this.http.get('http://ip.jsontest.com/').toPromise()
     .then(res=>res.json())
